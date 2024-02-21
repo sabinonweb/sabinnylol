@@ -20,6 +20,7 @@ async fn search(info: web::Query<Info>) -> impl Responder {
     let query = module::extract_command(&info.query);
     println!("q={query}");
     let redirect_url = match query {
+        "gh" => String::from("https://github.com"),
         "tw" => module::twitter::twitter_url_constructor(&info),
         "fb" => String::from("https://facebook.com"),
         "ig" => String::from("https://instagram.com"),

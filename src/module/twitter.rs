@@ -2,17 +2,14 @@ use crate::Info;
 use crate::module::extract_commands;
 
 pub fn twitter_url_constructor(info: &Info) -> String {
-    println!("inof{:?}", info);
     let query = extract_commands(&info.query);
-    println!("query = {:?}", query);
     let l = query.len();
     
     if l < 2 {
         return format!("https://twitter.com");
     } else {
         let second = query[1];
-        println!("second {}",second);
-        println!("secondchar{}",  second.chars().nth(0).unwrap());
+        
         match second.chars().nth(0).unwrap() {
             '@' => twitter_username_url(&info),
             '*' => twitter_search_url(&info),
@@ -22,22 +19,18 @@ pub fn twitter_url_constructor(info: &Info) -> String {
 }   
 
 pub fn twitter_username_url(info: &Info) -> String {
-    println!("called");
     let query = extract_commands(&info.query);
 
     let username_with = query[1];
     let username = &username_with[1..];
-    println!("{username}");
+    
     format!("https://twitter.com/{}", username)
 }
 
 pub fn twitter_search_url(info: &Info) -> String {
-    println!("twitter search url called");
     let query = extract_commands(&info.query);
     let search_with = query[1];
-    println!("query={:?}", query);
     let l = query.len();
-    println!("l = {l}");
     match l {
         2 => format!("https://twitter.com/search?query={}&src=trend_click&vertical=trends", &search_with[1..]),
         3 => format!("https://twitter.com/search?query={} {}&src=trend_click&vertical=trends", &search_with[1..], &query[2]),

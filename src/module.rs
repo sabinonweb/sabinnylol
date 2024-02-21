@@ -9,7 +9,7 @@ pub fn extract_command(query_str: &str) -> &str {
 pub fn extract_commands(query_str: &str) -> Vec<&str> {
     println!("{:?}", query_str);
     let query: Vec<&str> = query_str.split_whitespace().collect();
-    println!("{:?}", query);
+
     query
 }
 
