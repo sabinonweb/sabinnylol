@@ -1,5 +1,6 @@
 pub mod google;
 pub mod twitter;
+pub mod github;
 
 pub fn extract_command(query_str: &str) -> &str {
     let query: Vec<&str> = query_str.split_whitespace().collect();
