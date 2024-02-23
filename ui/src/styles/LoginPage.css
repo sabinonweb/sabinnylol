@@ -1,8 +1,3 @@
 body {
   background-color: blue;
-  border-width: 3;
-  border-color: red;
-  display: flex;
-  justify-content: center;
-  align-items: center;
 }

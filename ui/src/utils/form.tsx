@@ -10,10 +10,14 @@ export default function Form(props: PropTypes.any) {
         value={props.value}
         placeholder={props.placeholder}
         onChange={props.onChange}
-        className="flex ml-2 focus:outline-none"
+        className="flex ml-2 focus:outline-none bg-transparent"
       />
       <div className="mr-2">
-        {props.placeholder == "Username" ? <FaUser /> : <FaLock />}
+        {props.placeholder == "Username" ? (
+          <FaUser className="text-white" />
+        ) : (
+          <FaLock className="text-white" />
+        )}
       </div>
     </div>
   );

@@ -1,6 +1,5 @@
 import { useState } from "react";
 import Form from "../utils/form";
-import "../index.css";
 
 function LoginPage() {
   const [email, setEmail] = useState("");
@@ -8,8 +7,8 @@ function LoginPage() {
 
   return (
     <>
-      <div className="border-2 bg-sky-400 flex flex-col">
-        <div className="text-3xl font-extrabold p-3">Login</div>
+      <div className="flex flex-col bg-transparent p-3">
+        <div className="text-3xl font-extrabold p-3 text-white">Login</div>
         <div className="flex flex-col justify-around items-center h-32">
           <Form
             placeholder="Username"
@@ -27,16 +26,23 @@ function LoginPage() {
             <div className="flex flex-row justify-between items-center w-72">
               <div className="flex flex-row justify-center items-center">
                 <input type="checkbox" />
-                <div className="ml-2">Remember me</div>
+                <div className="ml-2 text-white">Remember me</div>
               </div>
-              <div>Forgot password</div>
+              <div className="text-white">Forgot password</div>
             </div>
           </div>
         </div>
         <div className="flex justify-center items-center pb-3">
-          <div className="text-2xl border-2 rounded-full mt-10 w-72 bg-orange-500">
+          <div className="text-2xl border-2 rounded-full mt-10 w-72 text-slate-500 bg-white">
             LogIn
           </div>
+        </div>
+        <div
+          className="flex flex-row justify-between w-64 text-white cursor-pointer"
+          onClick={() => console.log("clicked")}
+        >
+          <h1>Don't have an account?</h1>
+          <h1 className="font-semibold">Register</h1>
         </div>
       </div>
     </>
