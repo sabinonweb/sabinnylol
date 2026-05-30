@@ -1,4 +1,7 @@
+<<<<<<< HEAD
 
+=======
+>>>>>>> 5231bca56a7f2ec585fab592813090578694bf2f
 # 🐰 sabinnylol
 
 **sabinnylol** is a lightweight, high-performance URL command shortener built using **Rust** and **Actix-web**, inspired by Bunnylol (used at Facebook). It allows users to use shorthand commands like `gh` and `tw` to instantly navigate to dynamically generated URLs.
@@ -12,6 +15,7 @@
 
 ## 🧭 Available Commands
 
+<<<<<<< HEAD
 | Command | Description                         | Destination Logic                                 |
 | ------- | ----------------------------------- | ------------------------------------------------- |
 | `gh`  | Redirects to a GitHub URL           | Uses `module::github::github_url_generator`     |
@@ -23,6 +27,19 @@
 - **Actix-web** – Lightweight, asynchronous web framework
 - **Serde** – For structured data handling
 - Modular architecture for extensibility
+=======
+| Command | Description                         | Destination Logic                            |
+|---------|-------------------------------------|----------------------------------------------|
+| `gh`    | Redirects to a GitHub URL           | Uses `module::github::github_url_generator`  |
+| `tw`    | Redirects to a Twitter profile/link | Uses `module::twitter::twitter_url_constructor` |
+
+## 🛠️ Tech Stack
+
+- **Rust** – For system-level speed and safety  
+- **Actix-web** – Lightweight, asynchronous web framework  
+- **Serde** – For structured data handling  
+- Modular architecture for extensibility  
+>>>>>>> 5231bca56a7f2ec585fab592813090578694bf2f
 
 ## ▶️ Running Locally
 
@@ -42,4 +59,7 @@ cargo build --release
 
 # Run the server
 cargo run
+<<<<<<< HEAD
 ```
+=======
+>>>>>>> 5231bca56a7f2ec585fab592813090578694bf2f
